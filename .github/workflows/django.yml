@@ -27,6 +27,8 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       env: 
+          ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
+          DBG_MODE: ${{ secrets.DBG_MODE }}
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
           EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
           EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
