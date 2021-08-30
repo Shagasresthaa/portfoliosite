@@ -1,0 +1,50 @@
+nav {
+    font-weight: bold;
+}
+
+.hdrs {
+    padding: 5px !important;
+}
+
+.navbar {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.nav-link:hover{
+    color: #64ffda !important;
+    transition: all 0.5s ease;
+}
+
+.navbar-brand{
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.fa-code {
+    color: #64ffda !important;
+}
+
+.nav-item{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.fhead{
+    font-size: 1.25rem;
+}
+
+.flogo{    
+    width: 5rem;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+footer {
+    margin-top: auto;
+}

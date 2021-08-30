@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/628503b113.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/base.css' %}"/>
+  </head>
+  <body class="bg-dark">
+
+    <header id="headr">
+      <nav class="navbar shadow navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <i class="fas fa-code d-inline-block align-text-center"></i>
+            <span class="hdrs"></span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="hm nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="abt nav-link" href="{% url 'aboutme' %}">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="prj nav-link" href="{% url 'projects' %}">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="blg nav-link" href="{% url 'blog' %}">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="cntc nav-link" href="{% url 'contact' %}">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    {% block content %} {% endblock %}
+            
+    <footer id="ftr" class="text-center text-white" style="background-color: #0a4275;">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <b>© Shaga Sresthaa, 2021</b><br><span class="fhead"><b>Powered by</b> <img src="https://static.djangoproject.com/img/logos/django-logo-negative.svg" class="flogo"></span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+i{
+    color: aqua;
+}
+
+.hdrs::before {
+    content: "About Me" !important; 
+}
+
+.abt {
+    color: #64ffda !important;
+}
+
+.navbar-brand{
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.nav-item{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+body{
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.fhead{
+    font-size: 1.25rem;
+}
+
+.flogo{    
+    width: 5rem;
+}
+
+.introsect{
+    padding: 3rem;
+}
+
+.header1{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    
+	transform: skew(-20deg);
+}
+
+.skewf{
+	transform: skew(20deg);
+    margin-bottom: 0;
+    padding-left: 5px;
+}
+
+.aboutcont{
+    text-align: justify;
+    font-size: 1.25rem;
+    color: rgb(255, 255, 255);
+}
+
+.card {
+    text-align: justify;
+    margin: 0.5rem;
+}
+
+/* Logo heights for cards */
+
+.dj{
+    width: 37%;
+}
+
+.jva {
+    width: 27%;
+}
+
+.hcjs {
+    width: 43%;
+}
+
+.pgql {
+    width: 17%;
+}
+
+.awlg {
+    width: 27%;
+}
+
+.vcode {
+    width: 18%;
+}
+
+.ansd {
+    width: 18%;
+}
+
+.lnx {
+    width: 16%;
+}
+
+
+/* Logo heights for cards end */
+
+.cardholder {
+    padding: 0;
+}
+
+.card-img-top{
+    padding: 5px;
+}
+
+@media (max-width: 800px) {
+    .header1{
+        width: 80%;
+    }
+}

@@ -1,0 +1,7 @@
+.prj {
+    color: #64ffda !important; 
+}
+
+.hdrs::before {
+    content: "Projects" !important; 
+}

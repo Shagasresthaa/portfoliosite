@@ -1,0 +1,40 @@
+.blg {
+    color: #64ffda !important; 
+}
+
+.hdrs::before {
+    content: "Contact Me" !important; 
+}
+
+.contactform{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+main {
+    min-width: 80%;
+}
+
+.display-2, .form-label{
+    color: rgb(255, 255, 255);
+}
+
+.resp{
+    margin-top: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+
+@media (max-width: 800px){
+    .title{
+        text-align: center;
+    }
+    .sbbtn{
+        text-align: center;
+        justify-content: center;
+    }
+}

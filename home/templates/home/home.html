@@ -1,0 +1,47 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<head>
+  <title>Home Page</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="{% static 'home/home.js' %}"></script> 
+</head>
+
+<div id="mnd" class="container-fluid intro">
+  <main>
+    <p class="inthd hms">
+      <p class="h2">Hello, my name is</p> 
+      <h1 class="display-3">Shaga Sresthaa.</h1> 
+      <h1 class="display-4">I am a Software Engineering Graduate</h1>
+      <br> 
+      <p class="h5">I specialize in full stack based applications and system administration 
+        related tasks. I'm currently working on kubernetes and devops.</p>
+      
+      <div class="container-fluid connectbtns">
+        <a href="{% url 'aboutme' %}" class="btns btn btn-primary"><b>About me</b></a>
+        <a href="{% url 'projects' %}" class="btns btn btn-success"><b>View My Work</b></a>
+        <a href="{% url 'blog' %}" class="btns btn btn-info"><b>Blog</b></a>
+      </div>
+      
+      <p class="h5">Want to connect or just drop a hello? 
+        <a href="{% url 'contact' %}" class="abtlink">Contact Me</a>.</p>
+    </p>
+
+    <div class="lnks">
+      <a href="https://www.linkedin.com/in/shaga-sresthaa-a5329b154/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a href="https://github.com/Shagasresthaa" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+      <a href="https://www.instagram.com/sneo2000/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="" target="_blank"><i class="far fa-file-pdf fa-2x"></i></a>
+      <a href="https://drive.google.com/drive/folders/1bs98W8ON9Rfk_zj_zmxD6dYAP14xQQht?usp=sharing" target="_blank"><i class="fas fa-award fa-2x"></i></i></a>
+    </div>
+  </main>
+</div>
+
+{% endblock content %}
+

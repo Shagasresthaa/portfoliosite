@@ -1,0 +1,7 @@
+.blg {
+    color: #64ffda !important; 
+}
+
+.hdrs::before {
+    content: "Blog" !important; 
+}
