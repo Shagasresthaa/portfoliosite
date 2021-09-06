@@ -5,3 +5,7 @@
 .hdrs::before {
     content: "Projects" !important; 
 }
+
+.projects {
+    padding-top: 10vh;
+}

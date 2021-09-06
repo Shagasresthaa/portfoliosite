@@ -35,8 +35,9 @@ nav {
 }
 
 .flogo{    
-    width: 5rem;
+    margin: 0.5rem;
 }
+
 
 body {
     min-height: 100vh;

@@ -6,6 +6,11 @@
     color: #64ffda !important;
 }
 
+.introsect {
+    padding-top: 10vh;
+}
+
+
 @media (max-width: 800px) {
     
 }

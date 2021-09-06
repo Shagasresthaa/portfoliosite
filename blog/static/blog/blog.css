@@ -5,3 +5,10 @@
 .hdrs::before {
     content: "Blog" !important; 
 }
+
+.blog{
+    padding-top: 10vh;
+}
+
+@media (max-width: 800px){
+}

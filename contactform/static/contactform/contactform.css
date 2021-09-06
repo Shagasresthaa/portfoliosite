@@ -7,6 +7,7 @@
 }
 
 .contactform{
+    padding-top: 10vh;
     height: 100%;
     display: flex;
     align-items: center;
@@ -28,8 +29,8 @@ main {
     color: rgb(255, 255, 255);
 }
 
-
 @media (max-width: 800px){
+
     .title{
         text-align: center;
     }
