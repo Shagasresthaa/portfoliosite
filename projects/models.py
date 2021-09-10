@@ -1,4 +1,5 @@
 from django.db import models
+from django_resized import ResizedImageField
 
 # Create your models here.
 
@@ -9,7 +10,7 @@ class projectsList(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     status = models.CharField(max_length=10)
-    img = models.ImageField(default='default.jpg',upload_to='project_pics')
+    img = ResizedImageField(size=[800, 800], upload_to='project_pics', default='default.jpg', quality=75, force_format='JPEG')
     url = models.URLField()
     
     class Meta:
