@@ -23,6 +23,7 @@
 }
 
 .card-header {
+    max-width: 45%;
     border: none;
     background: white;
 }
