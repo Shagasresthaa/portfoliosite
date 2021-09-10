@@ -30,6 +30,10 @@
     height: 100%;
 }
 
+.headingPr {
+    font-size: 2rem;
+}
+
 /* For Mobile Support */
 
 @media (max-width:800px) {
