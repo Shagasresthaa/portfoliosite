@@ -23,15 +23,19 @@
 }
 
 .card-header {
-    width: 40%;
-}
-
-.card-img {
-    height: 100%;
+    width: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    background: white;
 }
 
 .headingPr {
     font-size: 2rem;
+}
+
+.card-text {
+    text-align: justify;
 }
 
 /* For Mobile Support */
