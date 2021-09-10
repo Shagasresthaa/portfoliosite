@@ -23,13 +23,13 @@
 }
 
 .card-header {
-    width: 45%;
+    width: 25%;
     border: none;
     background: white;
 }
 
 .card-img {
-    width: inherit;
+    width: -webkit-fill-available;
     height: 100%;
 }
 
