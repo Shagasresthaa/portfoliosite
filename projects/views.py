@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from projects.models import projectsList
 
 # Create your views here.
 
 def projectsPage(request):
-    return render(request, 'projects/projects.html')
+
+    projects = projectsList.objects.all()
+
+    return render(request, 'projects/projects.html', {'projects': list(projects)})

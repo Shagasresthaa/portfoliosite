@@ -15,7 +15,24 @@
 
 <div id="mnd" class="container-fluid projects">
   <main>
-    
+    <div class="container-fluid card-container">
+      {% for project in projects %}
+        <div class="card">
+          <div class="card-header">
+            <img src="{{ project.img.url }}" class="card-img" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ project.name }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <p class="Date">Start Date: {{project.start_date}}<br>End Date: {{project.end_date}}</p>
+            <p class="sttxt">Project Status: {{project.status}}</p>
+            <div class="btnhldr">
+              <a href="{{ project.url }}" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </main>
 </div>
 
