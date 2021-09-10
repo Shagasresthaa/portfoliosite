@@ -23,14 +23,13 @@
 }
 
 .card-header {
-    width: 100%;
     border: none;
     background: white;
 }
 
 .card-img {
-    width: 10rem;
-    height: 10rem;
+    width: inherit;
+    height: 100%;
 }
 
 .headingPr {
