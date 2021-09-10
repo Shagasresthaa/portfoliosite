@@ -24,10 +24,12 @@
 
 .card-header {
     width: 70%;
-    margin-top: auto;
-    margin-bottom: auto;
     border: none;
     background: white;
+}
+
+.card-img {
+    height: 100%;
 }
 
 .headingPr {
@@ -46,6 +48,7 @@
     }
         
     .card-header {
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         border: none;
