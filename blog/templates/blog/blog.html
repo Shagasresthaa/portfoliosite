@@ -15,7 +15,38 @@
 
 <div id="mnd" class="container-fluid blog">
   <main>
+    <div class="container-fluid card-container">
+      {% for post in blogPosts %}
+        <div class="card">
+          <div class="card-header">
+            <img src="{{ post.blogHeaderImage.url }}" class="card-img" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><b class="headingPr">{{ post.title }}</b></h5>
+            {% if post.content|length > 150 %}
+              <p class="half-content card-text" id="half-{{post.postId}}">&nbsp;&nbsp;{{ post.content|truncatewords:70|slice:":-2" }} <a data-id="{{post.postId}}" href="javascript:void();" class="show-hide-btn"><b><i>...Continue Reading</i></b></a></p>
+              <p class="full-content card-text" id="full-{{post.postId}}" style="display: none;">&nbsp;&nbsp;{{ post.content }} <a data-id="{{post.postId}}" href="javascript:void();" class="show-hide-btn"><b><i>...Show less</i></b></a></p>
+            {% else %}
+              <p class="card-text">&nbsp;&nbsp;{{ post.content }}</p>
+            {% endif %}
+            <p class="card-text"><small class="text-muted"><b>--{{ post.publishedDate }}</b></small></p>
+            {% if post.isModified %}
+              <p class="card-text"><small class="text-muted"><b>Modified On {{ post.modifiedDate }}</b></small></p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
     
+    <script>
+      $(document).ready(function() {
+        $(".show-hide-btn").click(function() {
+          var id = $(this).data("id");
+          $("#half-" + id).toggle();
+          $("#full-" + id).toggle();
+        });
+      })
+    </script>
   </main>
 </div>
 

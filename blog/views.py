@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from blog.models import blogsList
 
 # Create your views here.
 
 def blogPage(request):
-    return render(request, 'blog/blog.html')
+
+    blogPosts = blogsList.objects.all()
+
+    return render(request, 'blog/blog.html', {"blogPosts": blogPosts})

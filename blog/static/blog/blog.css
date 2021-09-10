@@ -9,6 +9,53 @@
 .blog{
     padding-top: 10vh;
 }
+.card {
+    width: 80% !important;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+}
 
-@media (max-width: 800px){
+.card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    width: 25%;
+    border: none;
+    background: white;
+}
+
+.card-img {
+    width: -webkit-fill-available;
+    height: 100%;
+}
+
+.headingPr {
+    font-size: 2rem;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+/* For Mobile Support */
+
+@media (max-width:800px) {
+    .card {
+        flex-direction: column;
+    }
+        
+    .card-header {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        background: white;
+    }
+
+    .btnhldr {
+        text-align: center;
+    }
 }

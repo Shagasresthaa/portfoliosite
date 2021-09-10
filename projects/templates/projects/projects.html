@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
   <script src="{% static 'projects/projects.js' %}"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 
 <div id="mnd" class="container-fluid projects">
@@ -41,12 +40,12 @@
       {% endfor %}
       <script>
         $(document).ready(function() {
-    $(".show-hide-btn").click(function() {
-      var id = $(this).data("id");
-      $("#half-" + id).toggle();
-      $("#full-" + id).toggle();
-    });
-  })
+          $(".show-hide-btn").click(function() {
+            var id = $(this).data("id");
+            $("#half-" + id).toggle();
+            $("#full-" + id).toggle();
+          });
+        })
       </script>
     </div>
   </main>
