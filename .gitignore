@@ -2,5 +2,6 @@
 **/*.pyc
 db.sqlite3
 venv
+portfolioSiteEnv
 migrate.py
 config.py
