@@ -23,13 +23,18 @@
           </div>
           <div class="card-body">
             <h5 class="card-title"><b class="headingPr">{{ project.name }}</b></h5>
-            {% if project.description|length > 150 %}
-              <p class="half-content card-text" id="half-{{project.id}}"><b>Description:</b><br>&nbsp;&nbsp;{{ project.description|truncatewords:44|slice:":-2" }} <a data-id="{{project.id}}" href="javascript:void();" class="show-hide-btn"><b>...Continue Reading</b></a></p>
-              <p class="full-content card-text" id="full-{{project.id}}" style="display: none;"><b>Description:</b><br>&nbsp;&nbsp;{{ project.description }} <a data-id="{{project.id}}" href="javascript:void();" class="show-hide-btn"><b>...Show less</b></a></p>
+
+            {% if useMobile %}
+              {% if project.description|length > 150 %}
+                <p class="half-content card-text" id="half-{{project.id}}"><b>Description:</b><br>&nbsp;&nbsp;{{ project.description|truncatewords:44|slice:":-2" }} <a data-id="{{project.id}}" href="javascript:void();" class="show-hide-btn"><b>...Continue Reading</b></a></p>
+                <p class="full-content card-text" id="full-{{project.id}}" style="display: none;"><b>Description:</b><br>&nbsp;&nbsp;{{ project.description }} <a data-id="{{project.id}}" href="javascript:void();" class="show-hide-btn"><b>...Show less</b></a></p>
+              {% else %}
+                <p class="card-text"><b>Description:</b><br>&nbsp;&nbsp;{{ project.description }}</p>
+              {% endif %}
             {% else %}
               <p class="card-text"><b>Description:</b><br>&nbsp;&nbsp;{{ project.description }}</p>
             {% endif %}
-            
+
             <p class="Date">
               <b>Start Date:</b> {{project.start_date}}<br>
             {% if project.end_date is None %}

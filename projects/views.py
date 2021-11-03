@@ -6,5 +6,10 @@ from projects.models import projectsList
 def projectsPage(request):
 
     projects = projectsList.objects.all()
+    useMobile = False
+    if(request.user_agent.is_mobile or request.user_agent.is_tablet):
+        useMobile = True
+        
+    #print(request.user_agent.is_mobile)
 
-    return render(request, 'projects/projects.html', {'projects': list(projects)})
+    return render(request, 'projects/projects.html', {'projects': list(projects), 'useMobile':useMobile})
