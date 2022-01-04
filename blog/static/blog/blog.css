@@ -40,6 +40,11 @@
     text-align: justify;
 }
 
+.cmg {
+    color: white;
+    text-align: center;
+}
+
 /* For Mobile Support */
 
 @media (max-width:800px) {
