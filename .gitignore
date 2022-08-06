@@ -5,3 +5,4 @@ venv
 portfolioSiteEnv
 migrate.py
 config.py
+htmlTestFiles/*
