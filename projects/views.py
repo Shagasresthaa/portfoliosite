@@ -7,12 +7,9 @@ from projects.models import projectsList
 def projectsPage(request):
 
     projects = projectsList.objects.all()
-    #https://site-media-storage-django-server017-testing.s3.ap-south-1.amazonaws.com/html_files/test.html
 
     bucket_name = os.environ.get('AWS_DJANGO_BUCKET_NAME')
     location = os.environ.get('AWS_DJANGO_LOCATION')
-        
-    #url = "https://%s.s3.%s.amazonaws.com/%s" % (bucket_name, location, object_name)
 
     lst = list(projects)
     for i in lst:
