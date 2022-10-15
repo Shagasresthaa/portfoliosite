@@ -1,7 +1,6 @@
 {% extends "contactform/base.html" %}
 {% load static %}
 
-
 {% block content %}
 
 <head>
@@ -31,11 +30,27 @@
           {{form.message}}
         </div>
         <div class="sbbtn">
+          <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> 
           <button type="submit" class="subbtn btn btn-primary">Submit</button>
         </div>
-        <h5 class="resp">{{message}}</h5>
+        {% if messages %}
+          <div class="messages">
+            {% for message in messages %}
+            <h3 {% if message.tags %} class="messages {{ message.tags }}"{% endif %}>{{ message }}</h3>
+            {% endfor %}
+          </div>
+        {% endif %}
       </form>
     </div>
+
+    <!--Recaptcha Script-->
+    <script>
+      grecaptcha.ready(function() {
+        grecaptcha.execute('{{recaptcha_site_key}}', {action: "/contact/"}).then(function(token) {
+          document.getElementById('g-recaptcha-response').value = token;
+        });
+      });
+    </script>
   </main>
 </div>
 
